@@ -3,9 +3,11 @@ LOCAL_PATH:=$(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libsigcpp
-LOCAL_C_INCLUDES := $(SOURCE)
 LOCAL_CFLAGS := -DANDROID_NDK -DPLAY_MOD
 LOCAL_CPP_EXTENSION := .cc
+
+LOCAL_C_INCLUDES := \
+../../../libsigc++-2.2.10
 
 LOCAL_SRC_FILES := \
 ../../../libsigc++-2.2.10/sigc++/signal.cc \
