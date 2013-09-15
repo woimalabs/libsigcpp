@@ -7,7 +7,7 @@ LOCAL_CFLAGS := -DANDROID_NDK -DPLAY_MOD
 LOCAL_CPP_EXTENSION := .cc
 
 LOCAL_C_INCLUDES := \
-../../../libsigc++-2.2.10
+$(LOCAL_PATH)/../../../libsigc++-2.2.10
 
 LOCAL_SRC_FILES := \
 ../../../libsigc++-2.2.10/sigc++/signal.cc \
@@ -19,14 +19,13 @@ LOCAL_SRC_FILES := \
 ../../../libsigc++-2.2.10/sigc++/adaptors/lambda/lambda.cc
 
 LOCAL_CC_INCLUDES += \
-$(LOCAL_PATH) \
-$(LOCAL_PATH)/functors \
-$(LOCAL_PATH)/adaptors \
-$(LOCAL_PATH)/adaptors/lamda \
+$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++ \
+$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++/functors \
+$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++/adaptors \
+$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++/adaptors/lamda
+
 LOCAL_CFLAGS += -fvisibility=hidden
 
 LOCAL_LDLIBS := -lz
 
-
 include $(BUILD_SHARED_LIBRARY)
-
