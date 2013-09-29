@@ -18,14 +18,4 @@ LOCAL_SRC_FILES := \
 ../../../libsigc++-2.2.10/sigc++/functors/slot.cc \
 ../../../libsigc++-2.2.10/sigc++/adaptors/lambda/lambda.cc
 
-LOCAL_CC_INCLUDES += \
-$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++ \
-$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++/functors \
-$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++/adaptors \
-$(LOCAL_PATH)/../../../libsigc++-2.2.10/sigc++/adaptors/lamda
-
-LOCAL_CFLAGS += -fvisibility=hidden
-
-LOCAL_LDLIBS := -lz
-
 include $(BUILD_SHARED_LIBRARY)
